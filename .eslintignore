@@ -1,0 +1,35 @@
+# Ignore JSON files
+package.json
+package-lock.json
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build/output directories (if applicable)
+dist/
+build/
+
+# Ignore environment configuration files
+.env
+.env.*
+
+# Ignore Docker and Docker Compose files
+Dockerfile
+docker-compose.*
+
+# Ignore NestJS configuration files (or as needed)
+nestjs-cli.json
+
+# Ignore lock or log files
+yarn.lock
+pnpm-lock.yaml
+*.log
+
+# If you are using migration files (often don't need linting)
+src/migrations/**/*.ts
+
+# Temporary files or IDE files
+*.tmp
+*.swp
+.idea/
+.vscode/
