@@ -10,3 +10,5 @@ packages/**/tests/cases/**/*.ts
 dist
 integrations
 /.nx/workspace-data
+
+commitlint.config.js
