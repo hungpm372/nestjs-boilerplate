@@ -8,7 +8,7 @@
   "editor.detectIndentation": false,
   "eslint.validate": ["typescript"],
   "prettier.trailingComma": "all",
-  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifierEnding": "js",
   "javascript.preferences.importModuleSpecifier": "relative",
   "javascript.preferences.importModuleSpecifierEnding": "js",
