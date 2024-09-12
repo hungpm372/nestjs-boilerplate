@@ -1,0 +1,12 @@
+packages/**/tests/generated-definitions/*.ts
+packages/**/tests/**/*.fixture.ts
+
+packages/**/tests/cases/**/*.ts
+packages/**/tests/cases/**/*.ts
+
+/dist
+/coverage
+.nx/cache
+dist
+integrations
+/.nx/workspace-data
