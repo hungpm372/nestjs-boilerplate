@@ -1,0 +1,53 @@
+version: 2.1
+
+jobs:
+  lint:
+    docker:
+      - image: cimg/node:18.19.1
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: ESLint
+          command: npm run lint
+      - run:
+          name: Prettier
+          command: npm run prettier:check
+
+  test:
+    docker:
+      - image: cimg/node:18.19.1
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Run Tests
+          command: npm run test
+
+  build:
+    docker:
+      - image: cimg/node:18.19.1
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Build
+          command: npm run build
+
+workflows:
+  version: 2
+  ci:
+    jobs:
+      - lint
+      - test:
+          requires:
+            - lint
+      - build:
+          requires:
+            - test
